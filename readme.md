@@ -1,5 +1,5 @@
 # Nodejs-serverless-boilerplate😎
-A Powerful,Flexible and Scalable boilerplate for your Serverless backend.It will help you to keep Calm,you don't need to worry about building backend architecure.Just spend your time on building your writting your bussiness logic.
+A Powerful,Flexible and Scalable boilerplate for your Serverless backend.It will help you to keep Calm,you don't need to worry about building backend architecure.Just spend your time on writting your bussiness logic.
 
 
 It's an Open Source Boilerplate carfted by **Community Developers** for architecture Simplicity,Flexiblity and Scalablity.
