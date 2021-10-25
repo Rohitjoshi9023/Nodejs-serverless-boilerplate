@@ -38,7 +38,7 @@ global.config = value => {
 
 // controller
 global.controller = path => {
-  let Controller = require("../" + path);
+  let Controller = require(baseFile("app/Controllers/" + path));
 
   let instance = new Controller();
 

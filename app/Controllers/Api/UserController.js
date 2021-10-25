@@ -1,6 +1,4 @@
-let User = require("../../Models/User");
-let fs = require("fs");
-const saltRounds = 10;
+const { User } = require("../../Models");
 
 module.exports = class UserController {
   login(req, res) {
