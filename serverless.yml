@@ -1,50 +1,12 @@
-# Welcome to Serverless!
-#
-# This file is the main config file for your service.
-# It's very minimal at this point and uses default values.
-# You can always add more config options for more control.
-# We've included some commented out config examples here.
-# Just uncomment any of them to get that config option.
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
-
-service: nodejs-serverless-boilerplate
-# app and org for use with dashboard.serverless.com
-#app: your-app-name
-#org: your-org-name
-
-# You can pin your service to only deploy with a specific Serverless version
-# Check out our docs for more details
-# frameworkVersion: "=X.X.X"
-
+service: et-tl
 provider:
   name: aws
-  runtime: nodejs12.x
-
-
+  stage: live
+  region: us-east-1
+  runtime: nodejs14.x
 functions:
   app:
     handler: index.handler
     events:
       - http: ANY /
       - http: "ANY {proxy+}"
-
-  connectionHandler:
-      handler: handler/handler.connectionHandler
-      events:
-        - websocket:
-            route: $connect
-        - websocket:
-            route: $disconnect
-  defaultHandler:
-    handler: handler/handler.defaultHandler
-    events:
-      - websocket: $default #simple event definition without extra route property
-  joinHandler:
-    handler: handler/handler.joinHandler
-    events:
-      - websocket:
-          route: join    

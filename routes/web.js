@@ -1,9 +1,10 @@
-var express = require("express");
-var router = express.Router();
+let express = require("express");
+let router = express.Router();
 
-/* GET home page. */
-router.get("/", (req, res, next) => {
-  res.render("index", { title: "Express" });
+// user Routes
+let short_urls = controller("Api/ETURLController");
+router.get("/:short_code", [], (req, res) => {
+  return short_urls.redirectoShortLink(req, res);
 });
 
 module.exports = router;
